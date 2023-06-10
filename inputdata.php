@@ -11,24 +11,24 @@
 <body>
 
 	<!-- Navbar -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  		<a class="navbar-brand" href="index.php">Home</a>
+	<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  		<a class="navbar-brand text-white" href="index.php">Home</a>
   		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     		<span class="navbar-toggler-icon"></span>
   		</button>
   		<div class="collapse navbar-collapse" id="navbarNav">
     	<ul class="navbar-nav">
       		<li class="nav-item">
-        		<a class="nav-link" href="inputdata.php">Input Data</a>
+        		<a class="nav-link text-white" href="inputdata.php">Input Data</a>
       		</li>
           <li class="nav-item">
-            <a class="nav-link" href="proses.php">Record</a>
+            <a class="nav-link text-white" href="proses.php">Record</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="ranking.php">Ranking</a>
+            <a class="nav-link text-white" href="ranking.php">Ranking</a>
           </li>
-      		<li class="nav-item">
-                <a class="nav-link" href="about.php">About</a>
+      		<li class="nav-item text-white">
+                <a class="nav-link text-white" href="about.php">About</a>
             </li>
     	</ul>
   		</div>

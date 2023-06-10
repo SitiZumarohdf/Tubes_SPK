@@ -9,24 +9,24 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.php">Home</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand text-white" href="index.php">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="inputdata.php">Input Data</a>
+                <a class="nav-link text-white" href="inputdata.php">Input Data</a>
             </li>
           <li class="nav-item">
-            <a class="nav-link" href="proses.php">Record</a>
+            <a class="nav-link text-white" href="proses.php">Record</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="ranking.php">Ranking</a>
+            <a class="nav-link text-white" href="ranking.php">Ranking</a>
           </li>
             <li class="nav-item">
-                <a class="nav-link" href="about.php">About</a>
+                <a class="nav-link text-white" href="about.php">About</a>
             </li>
         </ul>
         </div>
@@ -98,9 +98,9 @@
     ?>
 
     <div class="alert alert-primary" role="alert">
-        Mahasiswa dengan nama <b style="font-size: 15pt;"><?php echo $data["nama"];?></b> menjadi urutan pertama dalam pemilihan mendapatkan beasiswa.
+        Mahasiswa dengan Nama <b style="font-size: 15pt;"><?php echo $data["nama"];?></b> Menjadi Urutan Pertama dalam Pemilihan Mahasiswa Terbaik dengan Nilai Akhir <b style="font-size: 15pt;"><?php echo $data["hasil"];?></b>.
     </div>
-    <!-- <h4>Mahasiswa dengan nama <mark><?php echo $data["nama"];?></mark> menjadi urutan pertama dalam pemilihan mendapatkan beasiswa.</h4> -->
+    <!-- <h4>Mahasiswa dengan nama <mark><?php echo $data["nama"];?></mark> menjadi urutan pertama Mahasiswa Terbaik.</h4> -->
 
     <?php $a++; } ?>
     <?php } ?>
