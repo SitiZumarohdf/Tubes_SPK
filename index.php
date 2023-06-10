@@ -46,12 +46,18 @@
     		<li><b>Core factor (60%) :</b>
         		<ul>
             		<li>IPK</li>
-            		<li>Penghasilan orang tua</li>
+            		<li>Public Speaking</li>
+					<li>Prestasi</li>
+					<li>Karya Ilmiah</li>
+					<li>Bahasa Inggris</li>
+					<li>Daftar Kehadiran</li>
         		</ul>
       		</li>
       		<li><b>Secondar factor (40%) :</b>
         		<ul>
-		            <li>Tanggungan orang tua</li>
+		            <li>Tingkah Laku</li>
+					<li>Aktif UKM atau HMJ</li>
+					<li>Kedisiplinan</li>
 		            <li>Semester</li>
         		</ul>
       		</li>
@@ -100,16 +106,14 @@
   		</dl>
   		<!-- /IPK -->
 
-		<!-- Penghasilan Ortu -->
+		<!-- Public Speaking -->
 		<dl class="row">
     		<dt class="col-sm-1">2.</dt>
-    		<dd class="col-sm-11"><b>Penghasilan Orang tua</b></dd>
+    		<dd class="col-sm-11"><b>Public Speaking</b></dd>
 
     		<dt class="col-sm-1"></dt>
     		<dd class="col-sm-11">
-    			Kriteria penghasilan orangtua merupakan persyaratan yang dibutuhkan untuk pengambilan
-      			keputusan, berdasarkan jumlah penghasilan tetap maupun tidak setiap bulannya. Berikut penjabaran
-      			interval jumlah penghasilan orangtua .
+    			Kriteria Public Speaking.... .
     		</dd>
 
 		    <dt class="col-sm-1"></dt>
@@ -117,7 +121,7 @@
       			<table class="table table-striped">
         			<thead>
           				<tr>
-            				<th scope="col">Penghasilan ortu</th>
+            				<th scope="col">Public Speaking</th>
 				            <th scope="col">Nilai</th>
 				        </tr>
 			        </thead>
@@ -142,18 +146,16 @@
 		      	</table>
 		    </dd>
 		</dl>
-  		<!-- /Penghasilan Orang Tua -->
+  		<!-- /Public Speaking -->
 
-  		<!-- Tanggungan -->
+  		<!-- Prestasi -->
   		<dl class="row">
     		<dt class="col-sm-1">3.</dt>
-    		<dd class="col-sm-11"><b>Tanggungan Orang Tua</b></dd>
+    		<dd class="col-sm-11"><b>Prestasi</b></dd>
 
 		    <dt class="col-sm-1"></dt>
 		    <dd class="col-sm-11">
-		      	Kriteria jumlah tanggungan orangtua merupakan persyaratan yang dibutuhkan untuk pengambilan
-		      	keputusan, berdasarkan jumlah anak yang masih menjadi tanggungan orangtua berupa biaya hidup.
-		      	Berikut penjabaran jumlah interval anak yang telah dikonversikan dengan bilangan.
+		      	Kriteria Prestasi.....
 		    </dd>
 
 		    <dt class="col-sm-1"></dt>
@@ -161,7 +163,7 @@
 		      	<table class="table table-striped">
 		        	<thead>
 		          		<tr>
-		            		<th scope="col">Tanggungan Orang tua</th>
+		            		<th scope="col">Prestasi</th>
 		            		<th scope="col">Nilai</th>
 		          		</tr>
 		        	</thead>
