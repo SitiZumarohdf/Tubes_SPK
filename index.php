@@ -19,7 +19,7 @@
 	            	<a class="nav-link" href="proses.php">Record</a>
 	         	</li>
 	         	<li class="nav-item">
-	            	<a class="nav-link" href="rangking.php">Ranking</a>
+	            	<a class="nav-link" href="ranking.php">Ranking</a>
 	        	</li>
 	      		<li class="nav-item">
 	                <a class="nav-link" href="about.php">About</a>

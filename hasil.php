@@ -23,7 +23,7 @@
             <a class="nav-link" href="proses.php">Record</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="rangking.php">Ranking</a>
+            <a class="nav-link" href="ranking.php">Ranking</a>
           </li>
             <li class="nav-item">
                 <a class="nav-link" href="about.php">About</a>
@@ -183,7 +183,7 @@
     <br><br>
 
     <!-- Hapus Record -->
-    <form  role="form" method="post" action="rangking.php" class="form-inline">
+    <form  role="form" method="post" action="ranking.php" class="form-inline">
         <div class="form-group mb-2">
             <label class="sr-only"></label>
             <input type="text" readonly class="form-control-plaintext" value="Perankingan">
