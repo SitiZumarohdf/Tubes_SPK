@@ -188,11 +188,263 @@
 		      	</table>
 		    </dd>
 		</dl>
-		<!-- /Tanggungan -->
+		<!-- /Prestasi -->
+
+		<!-- Karya Ilmiah-->
+		<dl class="row">
+    		<dt class="col-sm-1">4.</dt>
+    		<dd class="col-sm-11"><b>Karya Ilmiah</b></dd>
+
+		    <dt class="col-sm-1"></dt>
+		    <dd class="col-sm-11">
+		      	Kriteria Karya Ilmiah.....
+		    </dd>
+
+		    <dt class="col-sm-1"></dt>
+		    <dd class="col-sm-11">
+		      	<table class="table table-striped">
+		        	<thead>
+		          		<tr>
+		            		<th scope="col">Karya Ilmiah</th>
+		            		<th scope="col">Nilai</th>
+		          		</tr>
+		        	</thead>
+		        	<tbody>
+		          		<tr>
+		            		<td>Jumlah 1</td>
+		            		<th scope="row">1</th>
+		          		</tr>
+		          		<tr>
+		            		<td>Jumlah 2</td>
+		            		<th scope="row">2</th>
+		          		</tr>
+		          		<tr>
+		            		<td>Jumlah 3</td>
+		            		<th scope="row">3</th>
+		         		</tr>
+		          		<tr>
+		            		<td>Jumlah >3 </td>
+		            		<th scope="row">4</th>
+		          		</tr>
+		        	</tbody>
+		      	</table>
+		    </dd>
+		</dl>
+		<!-- /Karya Ilmiah -->
+
+		<!-- Bahasa Inggris -->
+		<dl class="row">
+    		<dt class="col-sm-1">5.</dt>
+    		<dd class="col-sm-11"><b>Bahasa Inggris</b></dd>
+
+		    <dt class="col-sm-1"></dt>
+		    <dd class="col-sm-11">
+		      	Kriteria Bahasa Inggris.....
+		    </dd>
+
+		    <dt class="col-sm-1"></dt>
+		    <dd class="col-sm-11">
+		      	<table class="table table-striped">
+		        	<thead>
+		          		<tr>
+		            		<th scope="col">Bahasa Inggris</th>
+		            		<th scope="col">Nilai</th>
+		          		</tr>
+		        	</thead>
+		        	<tbody>
+		          		<tr>
+		            		<td>Jumlah 1</td>
+		            		<th scope="row">1</th>
+		          		</tr>
+		          		<tr>
+		            		<td>Jumlah 2</td>
+		            		<th scope="row">2</th>
+		          		</tr>
+		          		<tr>
+		            		<td>Jumlah 3</td>
+		            		<th scope="row">3</th>
+		         		</tr>
+		          		<tr>
+		            		<td>Jumlah >3 </td>
+		            		<th scope="row">4</th>
+		          		</tr>
+		        	</tbody>
+		      	</table>
+		    </dd>
+		</dl>
+		<!-- /Bahasa Inggris -->
+
+		<!-- Daftar Kehadiran -->
+		<dl class="row">
+    		<dt class="col-sm-1">6.</dt>
+    		<dd class="col-sm-11"><b>Daftar Kehadiran</b></dd>
+
+		    <dt class="col-sm-1"></dt>
+		    <dd class="col-sm-11">
+		      	Kriteria Daftar Kehadiran.....
+		    </dd>
+
+		    <dt class="col-sm-1"></dt>
+		    <dd class="col-sm-11">
+		      	<table class="table table-striped">
+		        	<thead>
+		          		<tr>
+		            		<th scope="col">Daftar Kehadiran</th>
+		            		<th scope="col">Nilai</th>
+		          		</tr>
+		        	</thead>
+		        	<tbody>
+		          		<tr>
+		            		<td>Jumlah 1</td>
+		            		<th scope="row">1</th>
+		          		</tr>
+		          		<tr>
+		            		<td>Jumlah 2</td>
+		            		<th scope="row">2</th>
+		          		</tr>
+		          		<tr>
+		            		<td>Jumlah 3</td>
+		            		<th scope="row">3</th>
+		         		</tr>
+		          		<tr>
+		            		<td>Jumlah >3 </td>
+		            		<th scope="row">4</th>
+		          		</tr>
+		        	</tbody>
+		      	</table>
+		    </dd>
+		</dl>
+		<!-- /Daftar Kehadiran -->
+
+		<!--Tingkah Laku -->
+		<dl class="row">
+    		<dt class="col-sm-1">7.</dt>
+    		<dd class="col-sm-11"><b>Tingkah Laku</b></dd>
+
+		    <dt class="col-sm-1"></dt>
+		    <dd class="col-sm-11">
+		      	Kriteria Tingkah Laku.....
+		    </dd>
+
+		    <dt class="col-sm-1"></dt>
+		    <dd class="col-sm-11">
+		      	<table class="table table-striped">
+		        	<thead>
+		          		<tr>
+		            		<th scope="col">Tingkah Laku</th>
+		            		<th scope="col">Nilai</th>
+		          		</tr>
+		        	</thead>
+		        	<tbody>
+		          		<tr>
+		            		<td>Jumlah 1</td>
+		            		<th scope="row">1</th>
+		          		</tr>
+		          		<tr>
+		            		<td>Jumlah 2</td>
+		            		<th scope="row">2</th>
+		          		</tr>
+		          		<tr>
+		            		<td>Jumlah 3</td>
+		            		<th scope="row">3</th>
+		         		</tr>
+		          		<tr>
+		            		<td>Jumlah >3 </td>
+		            		<th scope="row">4</th>
+		          		</tr>
+		        	</tbody>
+		      	</table>
+		    </dd>
+		</dl>
+		<!-- /Tingkah Laku -->
+
+		<!-- Keaktifan Mengkuti UKM atau HMJ -->
+		<dl class="row">
+    		<dt class="col-sm-1">8.</dt>
+    		<dd class="col-sm-11"><b>Keaktifan Mengkuti UKM atau HMJ</b></dd>
+
+		    <dt class="col-sm-1"></dt>
+		    <dd class="col-sm-11">
+		      	Kriteria Keaktifan Mengkuti UKM atau HMJ.....
+		    </dd>
+
+		    <dt class="col-sm-1"></dt>
+		    <dd class="col-sm-11">
+		      	<table class="table table-striped">
+		        	<thead>
+		          		<tr>
+		            		<th scope="col">Keaktifan Mengkuti UKM atau HMJ</th>
+		            		<th scope="col">Nilai</th>
+		          		</tr>
+		        	</thead>
+		        	<tbody>
+		          		<tr>
+		            		<td>Jumlah 1</td>
+		            		<th scope="row">1</th>
+		          		</tr>
+		          		<tr>
+		            		<td>Jumlah 2</td>
+		            		<th scope="row">2</th>
+		          		</tr>
+		          		<tr>
+		            		<td>Jumlah 3</td>
+		            		<th scope="row">3</th>
+		         		</tr>
+		          		<tr>
+		            		<td>Jumlah >3 </td>
+		            		<th scope="row">4</th>
+		          		</tr>
+		        	</tbody>
+		      	</table>
+		    </dd>
+		</dl>
+		<!-- /Keaktifan Mengkuti UKM atau HMJ -->
+
+<!--Kedisiplinan -->
+<dl class="row">
+    		<dt class="col-sm-1">9.</dt>
+    		<dd class="col-sm-11"><b>Kedisiplinan</b></dd>
+
+		    <dt class="col-sm-1"></dt>
+		    <dd class="col-sm-11">
+		      	Kriteria Kedisiplinan.....
+		    </dd>
+
+		    <dt class="col-sm-1"></dt>
+		    <dd class="col-sm-11">
+		      	<table class="table table-striped">
+		        	<thead>
+		          		<tr>
+		            		<th scope="col">Kedisiplinan</th>
+		            		<th scope="col">Nilai</th>
+		          		</tr>
+		        	</thead>
+		        	<tbody>
+		          		<tr>
+		            		<td>Jumlah 1</td>
+		            		<th scope="row">1</th>
+		          		</tr>
+		          		<tr>
+		            		<td>Jumlah 2</td>
+		            		<th scope="row">2</th>
+		          		</tr>
+		          		<tr>
+		            		<td>Jumlah 3</td>
+		            		<th scope="row">3</th>
+		         		</tr>
+		          		<tr>
+		            		<td>Jumlah >3 </td>
+		            		<th scope="row">4</th>
+		          		</tr>
+		        	</tbody>
+		      	</table>
+		    </dd>
+		</dl>
+		<!-- /Kedisiplinan -->
 
 	  	<!-- Semester -->
 	  	<dl class="row">
-	    	<dt class="col-sm-1">4.</dt>
+	    	<dt class="col-sm-1">10.</dt>
 	    	<dd class="col-sm-11"><b>Semester</b></dd>
 
 		    <dt class="col-sm-1"></dt>
