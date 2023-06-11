@@ -113,7 +113,7 @@
 
     		<dt class="col-sm-1"></dt>
     		<dd class="col-sm-11">
-    			Kriteria Public Speaking.... .
+    			Kriteria Public Speaking untuk mengukur kemampuan mahasiswa dalam berbicara di depan umum
     		</dd>
 
 		    <dt class="col-sm-1"></dt>
@@ -126,21 +126,21 @@
 				        </tr>
 			        </thead>
 			        <tbody>
-			          	<tr>
-			            	<td><=1.000.000 </td>
-			            	<th scope="row">4</th>
-			          	</tr>
-			          	<tr>
-			            	<td>>1.000.000 <=3.000.000</td>
-			            	<th scope="row">3</th>
-			          	</tr>
-			          	<tr>
-			            	<td>>3.000.000 <=5.000.000</td>
-			            	<th scope="row">2</th>
+		          		<tr>
+		            		<td>Jumlah 1</td>
+		            		<th scope="row">1</th>
 		          		</tr>
 		          		<tr>
-		            		<td>>=5.000.000</td>
-		            		<th scope="row">1</th>
+		            		<td>Jumlah 2</td>
+		            		<th scope="row">2</th>
+		          		</tr>
+		          		<tr>
+		            		<td>Jumlah 3</td>
+		            		<th scope="row">3</th>
+		         		</tr>
+		          		<tr>
+		            		<td>Jumlah >3 </td>
+		            		<th scope="row">4</th>
 		          		</tr>
 		        	</tbody>
 		      	</table>
@@ -155,7 +155,7 @@
 
 		    <dt class="col-sm-1"></dt>
 		    <dd class="col-sm-11">
-		      	Kriteria Prestasi.....
+		      	Kriteria Prestasi untuk mengukur jumlah prestasi yang telah diraih oleh mahasiswa.
 		    </dd>
 
 		    <dt class="col-sm-1"></dt>
@@ -197,7 +197,7 @@
 
 		    <dt class="col-sm-1"></dt>
 		    <dd class="col-sm-11">
-		      	Kriteria Karya Ilmiah.....
+		      	Kriteria Karya Ilmiah untuk mengukur jumlah karya ilmiah yang telah dihasilkan oleh mahasiswa
 		    </dd>
 
 		    <dt class="col-sm-1"></dt>
@@ -239,7 +239,7 @@
 
 		    <dt class="col-sm-1"></dt>
 		    <dd class="col-sm-11">
-		      	Kriteria Bahasa Inggris.....
+		      	Kriteria Bahasa Inggris untuk mengukur kemampuan mahasiswa dalam berbahasa Inggris. 
 		    </dd>
 
 		    <dt class="col-sm-1"></dt>
@@ -281,7 +281,7 @@
 
 		    <dt class="col-sm-1"></dt>
 		    <dd class="col-sm-11">
-		      	Kriteria Daftar Kehadiran.....
+		      	Kriteria Daftar Kehadiran untuk mengukur jumlah kehadiran mahasiswa.
 		    </dd>
 
 		    <dt class="col-sm-1"></dt>
@@ -323,7 +323,7 @@
 
 		    <dt class="col-sm-1"></dt>
 		    <dd class="col-sm-11">
-		      	Kriteria Tingkah Laku.....
+		      	Kriteria Tingkah Laku untuk mengukur tingkah laku mahasiswa
 		    </dd>
 
 		    <dt class="col-sm-1"></dt>
@@ -365,7 +365,7 @@
 
 		    <dt class="col-sm-1"></dt>
 		    <dd class="col-sm-11">
-		      	Kriteria Keaktifan Mengkuti UKM atau HMJ.....
+		      	Kriteria Keaktifan Mengkuti UKM atau HMJ untuk mengukur tingkat keaktifan mahasiswa dalam mengikuti kegiatan organisasi seperti Unit Kegiatan Mahasiswa (UKM) atau Himpunan Mahasiswa Jurusan (HMJ)
 		    </dd>
 
 		    <dt class="col-sm-1"></dt>
@@ -407,7 +407,7 @@
 
 		    <dt class="col-sm-1"></dt>
 		    <dd class="col-sm-11">
-		      	Kriteria Kedisiplinan.....
+		      	Kriteria Kedisiplinan mengacu pada tingkat keteraturan, ketertiban, dan kepatuhan mahasiswa terhadap aturan dan tata tertib yang berlaku di lingkungan kampus. Kedisiplinan merupakan salah satu aspek penting yang dinilai karena menunjukkan sikap dan perilaku mahasiswa dalam menjalankan tanggung jawabnya sebagai mahasiswa.
 		    </dd>
 
 		    <dt class="col-sm-1"></dt>
