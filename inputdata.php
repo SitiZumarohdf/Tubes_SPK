@@ -11,7 +11,7 @@
 <body>
 
 	<!-- Navbar -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+	<nav class="navbar navbar-expand-lg navbar-light bg-success font-weight-bold">
   		<a class="navbar-brand text-white" href="index.php">Home</a>
   		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     		<span class="navbar-toggler-icon"></span>
@@ -42,7 +42,7 @@
 	<form  role="form" method="post" class="form-inline" class="animated infinite zoomIn delay-2s">
   		<div class="form-group mb-2">
     		<label class="sr-only"></label>
-    		<input type="text" readonly class="form-control-plaintext" value="Jumlah Mahasiswa">
+    		<input type="text" readonly class="form-control-plaintext font-weight-bold" value="Jumlah Mahasiswa">
   		</div>
   		<div class="form-group mx-sm-3 mb-2">
     		<select name="jmlsiswa" class="form-control" id="exampleFormControlSelect1">
@@ -60,7 +60,6 @@
 	<!-- /Form -->
 
 
-
 	<!-- Form -->
 	<?php
 	 if(isset($_POST['submit'])) {
@@ -72,14 +71,14 @@
 		$_SESSION['jumlahsiswa'] = $jumlah;
 			for($a=1;$a<=$jumlah;$a++) {
 	 ?>
-
-  	<div class="form-group">
+	<div class="col-sm-6 offset-sm-3" >
+  	<div class="form-group ">
   		<label><b>Mahasiswa ke <?php echo$a; ?></b></label><br>
-    	<label for="exampleFormControlInput1">Nama Mahasiswa</label>
+    	<label class="font-weight-bold" for="exampleFormControlInput1">Nama Mahasiswa</label>
     	<input class="form-control" placeholder="Nama Mahasiswa" name="namasiswa<?php echo $a; ?>" autocomplete="off">
  	  </div>
  	<div class="form-group">
-    	<label for="exampleFormControlSelect1">IPK</label>
+    	<label class="font-weight-bold" for="exampleFormControlSelect1">IPK</label>
     	<select name="ipk<?php echo $a; ?>" class="form-control" id="exampleFormControlSelect1">
       		<option>----Select an option----</option>
       		<option value="1"><=2,5 </option>
@@ -89,7 +88,7 @@
     	</select>
   	</div>
   	<div class="form-group">
-    	<label for="exampleFormControlSelect2">Public Speaking</label>
+    	<label class="font-weight-bold" for="exampleFormControlSelect2">Public Speaking</label>
     	<select name="pblspeak<?php echo $a; ?>" class="form-control" id="exampleFormControlSelect2">
       		<option>----Select an option----</option>
       		<option value="4">Sangat Baik</option>
@@ -99,7 +98,7 @@
     	</select>
   	</div>
   	<div class="form-group">
-    	<label for="exampleFormControlSelect2">Bahasa Inggris</label>
+    	<label class="font-weight-bold" for="exampleFormControlSelect2">Bahasa Inggris</label>
     	<select name="big<?php echo $a; ?>" class="form-control" id="exampleFormControlSelect2">
       		<option>----Select an option----</option>
       		<option value="4">Sangat Baik</option>
@@ -109,18 +108,17 @@
     	</select>
   	</div>
   	<div class="form-group">
-    	<label for="exampleFormControlSelect2">Semester</label>
+    	<label class="font-weight-bold" for="exampleFormControlSelect2">Semester</label>
     	<select name="smt<?php echo $a; ?>" class="form-control" id="exampleFormControlSelect2">
       		<option>----Select an option----</option>
-      		<option value="0"><=2 / >8</option>
-      		<option value="1">3</option>
-			<option value="2">4</option>
-			<option value="3">5, 6</option>
-			<option value="4">7, 8</option>
+      		<option value="1">1 - 2</option>
+			<option value="2">3 - 4</option>
+			<option value="3">5 - 6</option>
+			<option value="4">7 - 8</option>
     	</select>
   	</div>
       <div class="form-group">
-    	<label for="exampleFormControlSelect2">Daftar Kehadiran</label>
+    	<label class="font-weight-bold" for="exampleFormControlSelect2">Daftar Kehadiran</label>
     	<select name="kehadiran<?php echo $a; ?>" class="form-control" id="exampleFormControlSelect2">
       		<option>----Select an option----</option>
       		<option value="4">Sangat Baik</option>
@@ -130,7 +128,7 @@
     	</select>
   	</div>
       <div class="form-group">
-    	<label for="exampleFormControlSelect2">Prestasi Akademin & Nonakademik</label>
+    	<label class="font-weight-bold" for="exampleFormControlSelect2">Prestasi Akademin & Nonakademik</label>
     	<select name="prestasi<?php echo $a; ?>" class="form-control" id="exampleFormControlSelect2">
       		<option>----Select an option----</option>
       		<option value="4">>=8</option>
@@ -140,7 +138,7 @@
     	</select>
   	</div>
       <div class="form-group">
-    	<label for="exampleFormControlSelect2">Tingkah Laku</label>
+    	<label class="font-weight-bold" for="exampleFormControlSelect2">Tingkah Laku</label>
     	<select name="tingkahlaku<?php echo $a; ?>" class="form-control" id="exampleFormControlSelect2">
       		<option>----Select an option----</option>
       		<option value="4">Sangat Baik</option>
@@ -150,7 +148,7 @@
     	</select>
   	</div>
       <div class="form-group">
-    	<label for="exampleFormControlSelect2">Keaktifan Organisasi</label>
+    	<label class="font-weight-bold" for="exampleFormControlSelect2">Keaktifan Organisasi</label>
     	<select name="aktiforganisasi<?php echo $a; ?>" class="form-control" id="exampleFormControlSelect2">
       		<option>----Select an option----</option>
       		<option value="4">Sangat Baik</option>
@@ -160,7 +158,7 @@
     	</select>
   	</div>
       <div class="form-group">
-    	<label for="exampleFormControlSelect2">Kedisiplinan</label>
+    	<label class="font-weight-bold" for="exampleFormControlSelect2">Kedisiplinan</label>
     	<select name="disiplin<?php echo $a; ?>" class="form-control" id="exampleFormControlSelect2">
       		<option>----Select an option----</option>
       		<option value="4">Sangat Baik</option>
@@ -170,7 +168,7 @@
     	</select>
   	</div>
       <div class="form-group">
-    	<label for="exampleFormControlSelect2">Karya Ilmiah</label>
+    	<label class="font-weight-bold" for="exampleFormControlSelect2">Karya Ilmiah</label>
     	<select name="kir<?php echo $a; ?>" class="form-control" id="exampleFormControlSelect2">
       		<option>----Select an option----</option>
       		<option value="4">Sangat Baik</option>
@@ -181,11 +179,11 @@
   	</div>
  	<br>
  	<?php } ?>
-  		<button type="submit" name="submitform" class="btn btn-primary">Submit</button><br>
+  		<button type="submit" name="submitform" class="btn btn-primary" style="display: block; margin:0 auto">Submit</button><br>
 	</form>
 	<?php } ?>
 	<!-- /Form -->
-
+	</div>
 	</div>
 
 </body>

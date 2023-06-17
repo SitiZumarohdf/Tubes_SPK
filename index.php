@@ -5,7 +5,7 @@
 </head>
 <body>
 	<!-- Navbar -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+	<nav class="navbar navbar-expand-lg navbar-light bg-success font-weight-bold">
   		<a class="navbar-brand text-white" href="index.php">Home</a>
   		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     		<span class="navbar-toggler-icon"></span>
@@ -465,23 +465,19 @@
 			        </thead>
 			        <tbody>
 			          	<tr>
-			            	<td><=2, >8</td>
-			            	<th scope="row">0</th>
-			          	</tr>
-			          	<tr>
-			            	<td>3</td>
+			            	<td>1 - 2</td>
 			            	<th scope="row">1</th>
 			          	</tr>
 			          	<tr>
-			            	<td>4</td>
+			            	<td>3 - 4</td>
 			            	<th scope="row">2</th>
 			          	</tr>
 			          	<tr>
-			            	<td>5, 6</td>
+			            	<td>5 - 6</td>
 			            	<th scope="row">3</th>
 			          	</tr>
 			          	<tr>
-			            	<td>7, 8</td>
+			            	<td>7 - 8</td>
 			            	<th scope="row">4</th>
 			          	</tr>
 			        </tbody>

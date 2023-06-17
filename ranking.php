@@ -9,7 +9,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-success font-weight-bold">
         <a class="navbar-brand text-white" href="index.php">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -34,9 +34,9 @@
     <!-- /Navbar -->
 
     <div class="container"><br><br>
-    <h5>Ranking</h5>
+    <h5 class="font-weight-bold">Ranking</h5>
     <!-- Tabel Ranking -->
-    <table class="table table-hover">
+    <table class="table table-hover table-responsive">
         <thead>
             <tr>
                 <th scope="col">Rank</th>

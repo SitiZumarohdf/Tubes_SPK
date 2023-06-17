@@ -10,7 +10,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-success font-weight-bold">
         <a class="navbar-brand text-white" href="index.php">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -230,16 +230,14 @@
                         $textki[$a] = "Kurang";
                     }
 
-                    if ($nilaismt[$a] == "0"){
-                        $textsmt[$a] = "<=2 / >8";
-                    } elseif ($nilaismt[$a] == "1") {
-                        $textsmt[$a] = "3";
-                    } elseif ($nilaismt[$a] == "2") {
-                        $textsmt[$a] = "4";
+                    if ($nilaismt[$a] == "4"){
+                        $textsmt[$a] = "7 - 8";
                     } elseif ($nilaismt[$a] == "3") {
-                        $textsmt[$a] = "5, 6";
+                        $textsmt[$a] = "5 - 6";
+                    } elseif ($nilaismt[$a] == "2") {
+                        $textsmt[$a] = "3 - 4";
                     } else {
-                        $textsmt[$a] = "7, 8";
+                        $textsmt[$a] = "1 - 2";
                     }
 
                     $sql = mysqli_query($koneksi,"INSERT INTO keteranganmhs (`nama`, `ket_ipk`, `ket_ps`, `ket_bing`, `ket_dk`, `ket_pres`, `ket_tk`, `ket_ukm`, `ket_disiplin`, `ket_ki`, `ket_smt`) 
@@ -250,18 +248,18 @@
                 for($a=1;$a<=$jumlah;$a++) {
                     
                     $nama[$a] = $_POST['namasiswa'.$a];
-                    $gapipk[$a] = ($nilaiipk[$a]) - 4;
-                    $gapps[$a] = ($nilaips[$a]) - 3;
-                    $gapbing[$a] = ($nilaibing[$a]) - 3;
-                    $gapdk[$a] = ($nilaidk[$a]) - 3;
-                    $gappres[$a] = ($nilaipres[$a]) - 4;
-                    $gaptk[$a] = ($nilaitk[$a]) - 4;
-                    $gapukm[$a] = ($nilaiukm[$a]) - 5;
-                    $gapdisiplin[$a] = ($nilaidisiplin[$a]) - 4;
-                    $gapki[$a] = ($nilaiki[$a]) - 4;
-                    $gapsmt[$a] = ($nilaismt[$a]) - 4;
+                    $gapipk[$a] = $nilaiipk[$a] - 4;
+                    $gapps[$a] = $nilaips[$a] - 3;
+                    $gapbing[$a] = $nilaibing[$a] - 3;
+                    $gapdk[$a] = $nilaidk[$a] - 3;
+                    $gappres[$a] = $nilaipres[$a] - 4;
+                    $gaptk[$a] = $nilaitk[$a] - 4;
+                    $gapukm[$a] = $nilaiukm[$a] - 5;
+                    $gapdisiplin[$a] = $nilaidisiplin[$a] - 4;
+                    $gapki[$a] = $nilaiki[$a] - 4;
+                    $gapsmt[$a] = $nilaismt[$a] - 4;
 
-                    $sql = mysqli_query($koneksi,"INSERT INTO gapmhs (nama, gapipk, gapps, gapbing, gapdk, gappres, gaptk, gapukm, gapdisiplin, gapki, gapsmt) 
+                    $sql = mysqli_query($koneksi,"INSERT INTO gapmhs (`nama`, `gapipk`, `gapps`, `gapbing`, `gapdk`, `gappres`, `gaptk`, `gapukm`, `gapdisiplin`, `gapki`, `gapsmt`) 
                     VALUES('$nama[$a]','$gapipk[$a]','$gapps[$a]','$gapbing[$a]', '$gapdk[$a]', '$gappres[$a]', '$gaptk[$a]', '$gapukm[$a]', '$gapdisiplin[$a]', '$gapki[$a]', '$gapsmt[$a]')") or die (mysqli_error($koneksi));
 
                 }
@@ -506,7 +504,7 @@
     <!-- /TUTUP -->
     <br><br>
     <!-- Table -->
-    <table class="table">
+    <table class="table table-responsive">
         <thead class="thead-dark">
             <tr>
               <th scope="col">#</th>
@@ -565,7 +563,7 @@
 
     <!-- Table -->
     <form  role="form" method="post" action="hasil.php" class="form-inline">
-        <table class="table">
+        <table class="table table-responsive">
             <thead class="thead-dark">
                 <tr>
                   <th scope="col">#</th>

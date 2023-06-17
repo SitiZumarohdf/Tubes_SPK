@@ -9,7 +9,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-success font-weight-bold">
         <a class="navbar-brand text-white" href="index.php">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -38,7 +38,7 @@
 
     <!-- Table -->
     <form  role="form" method="post" class="form-inline">
-        <table class="table">
+        <table class="table table-responsive">
             <thead class="thead-dark">
                 <tr>
                   <th scope="col">No.</th>
@@ -128,7 +128,7 @@
     <!-- /Tabel -->
 
     <!-- Tabel -->
-    <table class="table">
+    <table class="table table-responsive">
         <thead class="thead-dark">
             <tr>
                 <th scope="col">#</th>
