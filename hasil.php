@@ -85,16 +85,16 @@
                 <tr>
                   <th scope="col">GAP</th>
                   <th scope="col"></th>
+                  <th scope="col">4</th>
                   <th scope="col">3</th>
                   <th scope="col">3</th>
                   <th scope="col">3</th>
-                  <th scope="col">2</th>
-                  <th scope="col">0</th>
-                  <th scope="col">0</th>
-                  <th scope="col">0</th>
-                  <th scope="col">0</th>
-                  <th scope="col">0</th>
-                  <th scope="col">0</th>
+                  <th scope="col">4</th>
+                  <th scope="col">4</th>
+                  <th scope="col">5</th>
+                  <th scope="col">4</th>
+                  <th scope="col">4</th>
+                  <th scope="col">4</th>
                 </tr>
             </thead>
             <tbody>
@@ -143,8 +143,10 @@
                 <th scope="col">Bobot Kedisiplinan</th>
                 <th scope="col">Bobot Karya Ilmiah</th>
                 <th scope="col">Bobot Semester</th>
-                <th scope="col">NCF (60%)</th>
-                <th scope="col">NSF (40%)</th>
+                <th scope="col">NA (35%)</th>
+                <th scope="col">NKK (25%)</th>
+                <th scope="col">NP (20%)</th>
+                <th scope="col">NPP (20%)</th>
                 <th scope="col">Hasil</th>
             </tr>
         </thead>
@@ -170,8 +172,10 @@
                 <td><?php echo $data["bobotdisiplin"];?></td>
                 <td><?php echo $data["bobotki"];?></td>
                 <td><?php echo $data["bobotsmt"];?></td>
-                <td><?php echo $data["ncf"];?></td>
-                <td><?php echo $data["nsf"];?></td>
+                <td><?php echo $data["na"];?></td>
+                <td><?php echo $data["nkk"];?></td>
+                <td><?php echo $data["np"];?></td>
+                <td><?php echo $data["npp"];?></td>
                 <td><?php echo $data["hasil"];?></td>
             </tr>
             <?php $a++; } ?>

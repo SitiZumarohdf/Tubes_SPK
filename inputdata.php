@@ -69,7 +69,7 @@
 	 <?php
 	  session_start();
 		$jumlah = $_POST['jmlsiswa'];
-		$_SESSION['jumlahmahsiswa'] = $jumlah;
+		$_SESSION['jumlahsiswa'] = $jumlah;
 			for($a=1;$a<=$jumlah;$a++) {
 	 ?>
 

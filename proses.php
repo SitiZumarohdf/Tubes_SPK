@@ -242,7 +242,7 @@
                         $textsmt[$a] = "7, 8";
                     }
 
-                    $sql = mysqli_query($koneksi,"INSERT INTO keteranganmhs (nama, ket_ipk, ket_ps, ket_bing, ket_dk, ket_pres, ket_tk, ket_ukm, ket_disiplin, ket_ki, ket_smt) 
+                    $sql = mysqli_query($koneksi,"INSERT INTO keteranganmhs (`nama`, `ket_ipk`, `ket_ps`, `ket_bing`, `ket_dk`, `ket_pres`, `ket_tk`, `ket_ukm`, `ket_disiplin`, `ket_ki`, `ket_smt`) 
                     VALUES('$nama[$a]','$textipk[$a]','$textps[$a]','$textbing[$a]','$textdk[$a]', '$textpres[$a]', '$texttk[$a]', '$textukm[$a]', '$textdisiplin[$a]', '$textki[$a]', '$textsmt[$a]')") or die (mysqli_error($koneksi));
 
                 }
@@ -250,16 +250,16 @@
                 for($a=1;$a<=$jumlah;$a++) {
                     
                     $nama[$a] = $_POST['namasiswa'.$a];
-                    $gapipk[$a] = $nilaiipk[$a] - 4;
-                    $gapps[$a] = $nilaips[$a] - 4;
-                    $gapbing[$a] = $nilaibing[$a] - 4;
-                    $gapdk[$a] = $nilaidk[$a] - 3;
-                    $gappres[$a] = $nilaipres[$a] - 3;
-                    $gaptk[$a] = $nilaitk[$a] - 4;
-                    $gapukm[$a] = $nilaiukm[$a] - 5;
-                    $gapdisiplin[$a] = $nilaidisiplin[$a] - 4;
-                    $gapki[$a] = $nilaiki[$a] - 4;
-                    $gapsmt[$a] = $nilaismt[$a] - 3;
+                    $gapipk[$a] = ($nilaiipk[$a]) - 4;
+                    $gapps[$a] = ($nilaips[$a]) - 3;
+                    $gapbing[$a] = ($nilaibing[$a]) - 3;
+                    $gapdk[$a] = ($nilaidk[$a]) - 3;
+                    $gappres[$a] = ($nilaipres[$a]) - 4;
+                    $gaptk[$a] = ($nilaitk[$a]) - 4;
+                    $gapukm[$a] = ($nilaiukm[$a]) - 5;
+                    $gapdisiplin[$a] = ($nilaidisiplin[$a]) - 4;
+                    $gapki[$a] = ($nilaiki[$a]) - 4;
+                    $gapsmt[$a] = ($nilaismt[$a]) - 4;
 
                     $sql = mysqli_query($koneksi,"INSERT INTO gapmhs (nama, gapipk, gapps, gapbing, gapdk, gappres, gaptk, gapukm, gapdisiplin, gapki, gapsmt) 
                     VALUES('$nama[$a]','$gapipk[$a]','$gapps[$a]','$gapbing[$a]', '$gapdk[$a]', '$gappres[$a]', '$gaptk[$a]', '$gapukm[$a]', '$gapdisiplin[$a]', '$gapki[$a]', '$gapsmt[$a]')") or die (mysqli_error($koneksi));
@@ -468,12 +468,31 @@
                         $bobotsmt[$a] = "1";
                     }
 
-                    $ncfsiswa[$a] = (($bobotipk[$a]) + ($bobotps[$a]) + ($bobotpres[$a]) + ($bobotki[$a]) + ($bobotbing[$a]) + ($bobotdk[$a]))/6;
-                    $nsfsiswa[$a] = (($bobotsmt[$a]) + ($bobottk[$a]) + ($bobotukm[$a]) + ($bobotdisiplin[$a]))/4;
-                    $hasilsiswa[$a] = (0.6 * $ncfsiswa[$a]) + (0.4 * $nsfsiswa[$a]);
+                    //CoreFaktor
+                    $nac[$a]=(($bobotipk[$a]) + ($bobotki[$a]))/2;
+                    $nkkc[$a]=(($bobotps[$a]) + ($bobotbing[$a]))/2;
+                    $npc[$a]=(($bobotpres[$a]))/1;
+                    $nppc[$a]=(($bobotdk[$a]))/1;
+                    
 
-                    $sql = mysqli_query($koneksi,"INSERT INTO hasilmhs (nama, bobotipk, bobotps, bobotbing, bobotdk, bobotpres, bobottk, bobotukm, bobotdisiplin, bobotki, bobotsmt, ncf, nsf, hasil) 
-                    VALUES('$nama[$a]','$bobotipk[$a]','$bobotps[$a]','$bobotbing[$a]', '$bobotdk[$a]', '$bobotpres[$a]', '$bobottk[$a]', '$bobotukm[$a]', '$bobotdisiplin[$a]', '$bobotki[$a]', '$bobotsmt[$a]','$ncfsiswa[$a]','$nsfsiswa[$a]','$hasilsiswa[$a]')") or die (mysqli_error($koneksi));
+                    //SecondaryFaktor
+                    $nas[$a]=(($bobotsmt[$a]))/1;
+                    $nkks[$a]=0/2;
+                    $nps[$a]=(($bobotukm[$a]))/1;
+                    $npps[$a]=(($bobottk[$a]) + ($bobotdisiplin[$a]))/2;
+
+                    //Nilai Akhir Tiap Akspek
+                    $nilaiakhirNA[$a]=(0.6*$nac[$a]) + (0.4*$nas[$a]);
+                    $nilaiakhirNKK[$a]=(0.6*$nkkc[$a]) + (0.4*$nkks[$a]);
+                    $nilaiakhirNP[$a]=(0.6*$npc[$a]) + (0.4*$nps[$a]);
+                    $nilaiakhirNPP[$a]=(0.6*$nppc[$a]) + (0.4*$npps[$a]);
+
+                    //$ncfsiswa[$a] = (($bobotipk[$a]) + ($bobotps[$a]) + ($bobotpres[$a]) + ($bobotki[$a]) + ($bobotbing[$a]) + ($bobotdk[$a]))/6;
+                    //$nsfsiswa[$a] = (($bobotsmt[$a]) + ($bobottk[$a]) + ($bobotukm[$a]) + ($bobotdisiplin[$a]))/4;
+                    $hasilsiswa[$a] = (0.35 * $nilaiakhirNA[$a]) + (0.25 * $nilaiakhirNKK[$a]) + (0.20 * $nilaiakhirNP[$a]) + (0.2 * $nilaiakhirNPP[$a]);
+
+                    $sql = mysqli_query($koneksi,"INSERT INTO hasilmhs (`nama`, `bobotipk`, `bobotps`, `bobotbing`, `bobotdk`, `bobotpres`, `bobottk`, `bobotukm`, `bobotdisiplin`, `bobotki`, `bobotsmt`, `na`, `nkk`, `np`, `npp`, `hasil`) 
+                    VALUES('$nama[$a]','$bobotipk[$a]','$bobotps[$a]','$bobotbing[$a]', '$bobotdk[$a]', '$bobotpres[$a]', '$bobottk[$a]', '$bobotukm[$a]', '$bobotdisiplin[$a]', '$bobotki[$a]', '$bobotsmt[$a]','$nilaiakhirNA[$a]','$nilaiakhirNKK[$a]','$nilaiakhirNP[$a]','$nilaiakhirNPP[$a]','$hasilsiswa[$a]')") or die (mysqli_error($koneksi));
 
                 }
 
@@ -594,15 +613,15 @@
                   <th scope="col">GAP</th>
                   <th scope="col"></th>
                   <th scope="col">4</th>
-                  <th scope="col">4</th>
-                  <th scope="col">4</th>
                   <th scope="col">3</th>
                   <th scope="col">3</th>
+                  <th scope="col">3</th>
+                  <th scope="col">4</th>
                   <th scope="col">4</th>
                   <th scope="col">5</th>
                   <th scope="col">4</th>
                   <th scope="col">4</th>
-                  <th scope="col">3</th>
+                  <th scope="col">4</th>
                 </tr>
             </thead>
         </table>
