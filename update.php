@@ -32,7 +32,7 @@ if (isset($_POST['submitupdate'])) {
                 disiplin = '$nilaidisiplin',
                 `karya ilmiah` = '$nilaiki',
                 semester = '$nilaismt'
-            WHERE id = '$id'";
+            WHERE nama = '$nama'";
 
         $result = mysqli_query($koneksi, $sql);
 

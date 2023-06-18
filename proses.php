@@ -578,9 +578,12 @@ include "koneksi.php";
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic example">
                                     <!-- <button type="button" class="btn btn-danger" onclick="window.location.href='delete.php?id=<?php echo $data['nama']; ?>'">Hapus</button>-->
-                                    <button class="btn btn-danger"
+                                    <button class="btn btn-danger" style="margin-right: 5px;"
                                         onclick="window.location.href='delete.php?id=<?php echo $data['nama']; ?>'"><i
                                             class="fa fa-trash"></i></button>
+                                            <button class="btn btn-warning" style="margin-left: 5px;"
+                                        onclick="window.location.href='update.php?id=<?php echo $data['nama']; ?>'"><i
+                                            class="fa fa-pencil-square-o"></i></button>
                                 </div>
                             </td>
                         </tr>
