@@ -1,66 +1,73 @@
 <?php
-    include "koneksi.php";
+include "koneksi.php";
 ?>
 <html>
+
 <head>
     <title>Proses | Profile Matching</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-success font-weight-bold">
         <a class="navbar-brand text-white" href="index.php">Home</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link text-white" href="inputdata.php">Input Data</a>
-            </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="proses.php">Record</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="ranking.php">Ranking</a>
-          </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="about.php">About</a>
-            </li>
-        </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="inputdata.php">Input Data</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="inputdata.php">Update Data</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="proses.php">Record</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="ranking.php">Ranking</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="about.php">About</a>
+                </li>
+            </ul>
         </div>
     </nav>
     <!-- /Navbar -->
 
     <div class="container"><br><br>
 
-    <!-- Tambah Data -->
-    <form  role="form" method="post" action="inputdata.php" class="form-inline">
-        <div class="form-group mb-2">
-            <label class="sr-only"></label>
-            <input type="text" readonly class="form-control-plaintext" value="Tambah Mahasiswa">
-        </div>
-        <button type="submit" name="submittambah" class="btn btn-success">Tambah</button>
-    </form>
-    <!-- /Tambah Data -->
+        <!-- Tambah Data -->
+        <form role="form" method="post" action="inputdata.php" class="form-inline">
+            <div class="form-group mb-2">
+                <label class="sr-only"></label>
+                <input type="text" readonly class="form-control-plaintext" value="Tambah Mahasiswa">
+            </div>
+            <button type="submit" name="submittambah" class="btn btn-success">Tambah</button>
+        </form>
+        <!-- /Tambah Data -->
 
-    <!-- Hapus Record -->
-    <form  role="form" method="post" action="recorddelete.php" class="form-inline">
-        <div class="form-group mb-2">
-            <label class="sr-only"></label>
-            <input type="text" readonly class="form-control-plaintext" value="Hapus Semua Record">
-        </div>
-        <button type="submit" name="submitdelete" class="btn btn-danger">Hapus</button>
-    </form>
-    <!-- /Hapus Record -->
+        <!-- Hapus Record -->
+        <form role="form" method="post" action="recorddelete.php" class="form-inline">
+            <div class="form-group mb-2">
+                <label class="sr-only"></label>
+                <input type="text" readonly class="form-control-plaintext" value="Hapus Semua Record">
+            </div>
+            <button type="submit" name="submitdelete" class="btn btn-danger">Hapus</button>
+        </form>
+        <!-- /Hapus Record -->
 
-    <?php
+        <?php
         session_start();
         if (isset($_POST['submitform'])) {
 
-            if(isset($_SESSION['jumlahsiswa'])){
+            if (isset($_SESSION['jumlahsiswa'])) {
 
                 $jumlah = $_SESSION['jumlahsiswa'];
                 $nama = array();
@@ -119,28 +126,28 @@
                 $nsfsiswa = array();
                 $hasilsiswa = array();
 
-                for($a=1;$a<=$jumlah;$a++) {
+                for ($a = 1; $a <= $jumlah; $a++) {
 
-        	       $nama[$a] = $_POST['namasiswa'.$a];
-                   $nilaiipk[$a] = $_POST['ipk'.$a];
-                   $nilaips[$a] = $_POST['pblspeak'.$a];
-                   $nilaibing[$a] = $_POST['big'.$a];
-                   $nilaidk[$a] = $_POST['kehadiran'.$a];
-                   $nilaipres[$a] = $_POST['prestasi'.$a];
-                   $nilaitk[$a] = $_POST['tingkahlaku'.$a];
-                   $nilaiukm[$a] = $_POST['aktiforganisasi'.$a];
-                   $nilaidisiplin[$a] = $_POST['disiplin'.$a];
-                   $nilaiki[$a] = $_POST['kir'.$a];
-                   $nilaismt[$a] = $_POST['smt'.$a];
+                    $nama[$a] = $_POST['namasiswa' . $a];
+                    $nilaiipk[$a] = $_POST['ipk' . $a];
+                    $nilaips[$a] = $_POST['pblspeak' . $a];
+                    $nilaibing[$a] = $_POST['big' . $a];
+                    $nilaidk[$a] = $_POST['kehadiran' . $a];
+                    $nilaipres[$a] = $_POST['prestasi' . $a];
+                    $nilaitk[$a] = $_POST['tingkahlaku' . $a];
+                    $nilaiukm[$a] = $_POST['aktiforganisasi' . $a];
+                    $nilaidisiplin[$a] = $_POST['disiplin' . $a];
+                    $nilaiki[$a] = $_POST['kir' . $a];
+                    $nilaismt[$a] = $_POST['smt' . $a];
 
-                   $sql = mysqli_query($koneksi,"INSERT INTO mahasiswa (`nama`, `ipk`, `public speaking`, `bahasa inggris`,`daftar kehadiran`,`prestasi`,`tingkah laku`,`ukm`,`disiplin`, `karya ilmiah`,`semester`) 
-                   VALUES('$nama[$a]','$nilaiipk[$a]','$nilaips[$a]','$nilaibing[$a]', '$nilaidk[$a]', '$nilaipres[$a]', '$nilaitk[$a]', '$nilaiukm[$a]', '$nilaidisiplin[$a]', '$nilaiki[$a]', '$nilaismt[$a]')") or die (mysqli_error($koneksi));
+                    $sql = mysqli_query($koneksi, "INSERT INTO mahasiswa (`nama`, `ipk`, `public speaking`, `bahasa inggris`,`daftar kehadiran`,`prestasi`,`tingkah laku`,`ukm`,`disiplin`, `karya ilmiah`,`semester`) 
+                   VALUES('$nama[$a]','$nilaiipk[$a]','$nilaips[$a]','$nilaibing[$a]', '$nilaidk[$a]', '$nilaipres[$a]', '$nilaitk[$a]', '$nilaiukm[$a]', '$nilaidisiplin[$a]', '$nilaiki[$a]', '$nilaismt[$a]')") or die(mysqli_error($koneksi));
 
                 }
 
-                for($a=1;$a<=$jumlah;$a++) {
+                for ($a = 1; $a <= $jumlah; $a++) {
 
-                    if ($nilaiipk[$a] == "1"){
+                    if ($nilaiipk[$a] == "1") {
                         $textipk[$a] = "< 2,5 ";
                     } elseif ($nilaiipk[$a] == "2") {
                         $textipk[$a] = ">2,5 dan <= 3";
@@ -150,7 +157,7 @@
                         $textipk[$a] = "> 3,5";
                     }
 
-                    if ($nilaips[$a] == "4"){
+                    if ($nilaips[$a] == "4") {
                         $textps[$a] = "Sangat Baik";
                     } elseif ($nilaips[$a] == "3") {
                         $textps[$a] = "Baik";
@@ -160,7 +167,7 @@
                         $textps[$a] = "Kurang";
                     }
 
-                    if ($nilaibing[$a] == "4"){
+                    if ($nilaibing[$a] == "4") {
                         $textbing[$a] = "Sangat Baik";
                     } elseif ($nilaibing[$a] == "3") {
                         $textbing[$a] = "Baik";
@@ -170,7 +177,7 @@
                         $textbing[$a] = "Kurang";
                     }
 
-                    if ($nilaidk[$a] == "4"){
+                    if ($nilaidk[$a] == "4") {
                         $textdk[$a] = "Sangat Baik";
                     } elseif ($nilaidk[$a] == "3") {
                         $textdk[$a] = "Baik";
@@ -180,7 +187,7 @@
                         $textdk[$a] = "Kurang";
                     }
 
-                    if ($nilaipres[$a] == "4"){
+                    if ($nilaipres[$a] == "4") {
                         $textpres[$a] = ">=8";
                     } elseif ($nilaipres[$a] == "3") {
                         $textpres[$a] = "5-7";
@@ -190,7 +197,7 @@
                         $textpres[$a] = "<=1";
                     }
 
-                    if ($nilaitk[$a] == "4"){
+                    if ($nilaitk[$a] == "4") {
                         $texttk[$a] = "Sangat Baik";
                     } elseif ($nilaitk[$a] == "3") {
                         $texttk[$a] = "Baik";
@@ -200,7 +207,7 @@
                         $texttk[$a] = "Kurang";
                     }
 
-                    if ($nilaiukm[$a] == "4"){
+                    if ($nilaiukm[$a] == "4") {
                         $textukm[$a] = "Sangat Baik";
                     } elseif ($nilaiukm[$a] == "3") {
                         $textukm[$a] = "Baik";
@@ -210,7 +217,7 @@
                         $textukm[$a] = "Kurang";
                     }
 
-                    if ($nilaidisiplin[$a] == "4"){
+                    if ($nilaidisiplin[$a] == "4") {
                         $textdisiplin[$a] = "Sangat Baik";
                     } elseif ($nilaidisiplin[$a] == "3") {
                         $textdisiplin[$a] = "Baik";
@@ -220,7 +227,7 @@
                         $textdisiplin[$a] = "Kurang";
                     }
 
-                    if ($nilaiki[$a] == "4"){
+                    if ($nilaiki[$a] == "4") {
                         $textki[$a] = "Sangat Baik";
                     } elseif ($nilaiki[$a] == "3") {
                         $textki[$a] = "Baik";
@@ -230,7 +237,7 @@
                         $textki[$a] = "Kurang";
                     }
 
-                    if ($nilaismt[$a] == "4"){
+                    if ($nilaismt[$a] == "4") {
                         $textsmt[$a] = "7 - 8";
                     } elseif ($nilaismt[$a] == "3") {
                         $textsmt[$a] = "5 - 6";
@@ -240,14 +247,14 @@
                         $textsmt[$a] = "1 - 2";
                     }
 
-                    $sql = mysqli_query($koneksi,"INSERT INTO keteranganmhs (`nama`, `ket_ipk`, `ket_ps`, `ket_bing`, `ket_dk`, `ket_pres`, `ket_tk`, `ket_ukm`, `ket_disiplin`, `ket_ki`, `ket_smt`) 
-                    VALUES('$nama[$a]','$textipk[$a]','$textps[$a]','$textbing[$a]','$textdk[$a]', '$textpres[$a]', '$texttk[$a]', '$textukm[$a]', '$textdisiplin[$a]', '$textki[$a]', '$textsmt[$a]')") or die (mysqli_error($koneksi));
+                    $sql = mysqli_query($koneksi, "INSERT INTO keteranganmhs (`nama`, `ket_ipk`, `ket_ps`, `ket_bing`, `ket_dk`, `ket_pres`, `ket_tk`, `ket_ukm`, `ket_disiplin`, `ket_ki`, `ket_smt`) 
+                    VALUES('$nama[$a]','$textipk[$a]','$textps[$a]','$textbing[$a]','$textdk[$a]', '$textpres[$a]', '$texttk[$a]', '$textukm[$a]', '$textdisiplin[$a]', '$textki[$a]', '$textsmt[$a]')") or die(mysqli_error($koneksi));
 
                 }
 
-                for($a=1;$a<=$jumlah;$a++) {
-                    
-                    $nama[$a] = $_POST['namasiswa'.$a];
+                for ($a = 1; $a <= $jumlah; $a++) {
+
+                    $nama[$a] = $_POST['namasiswa' . $a];
                     $gapipk[$a] = $nilaiipk[$a] - 4;
                     $gapps[$a] = $nilaips[$a] - 3;
                     $gapbing[$a] = $nilaibing[$a] - 3;
@@ -259,14 +266,14 @@
                     $gapki[$a] = $nilaiki[$a] - 4;
                     $gapsmt[$a] = $nilaismt[$a] - 4;
 
-                    $sql = mysqli_query($koneksi,"INSERT INTO gapmhs (`nama`, `gapipk`, `gapps`, `gapbing`, `gapdk`, `gappres`, `gaptk`, `gapukm`, `gapdisiplin`, `gapki`, `gapsmt`) 
-                    VALUES('$nama[$a]','$gapipk[$a]','$gapps[$a]','$gapbing[$a]', '$gapdk[$a]', '$gappres[$a]', '$gaptk[$a]', '$gapukm[$a]', '$gapdisiplin[$a]', '$gapki[$a]', '$gapsmt[$a]')") or die (mysqli_error($koneksi));
+                    $sql = mysqli_query($koneksi, "INSERT INTO gapmhs (`nama`, `gapipk`, `gapps`, `gapbing`, `gapdk`, `gappres`, `gaptk`, `gapukm`, `gapdisiplin`, `gapki`, `gapsmt`) 
+                    VALUES('$nama[$a]','$gapipk[$a]','$gapps[$a]','$gapbing[$a]', '$gapdk[$a]', '$gappres[$a]', '$gaptk[$a]', '$gapukm[$a]', '$gapdisiplin[$a]', '$gapki[$a]', '$gapsmt[$a]')") or die(mysqli_error($koneksi));
 
                 }
 
-                for($a=1;$a<=$jumlah;$a++) {
+                for ($a = 1; $a <= $jumlah; $a++) {
 
-                    if ($gapipk[$a] == "0"){
+                    if ($gapipk[$a] == "0") {
                         $bobotipk[$a] = "5";
                     } elseif ($gapipk[$a] == "1") {
                         $bobotipk[$a] = "4.5";
@@ -286,7 +293,7 @@
                         $bobotipk[$a] = "1";
                     }
 
-                    if ($gapps[$a] == "0"){
+                    if ($gapps[$a] == "0") {
                         $bobotps[$a] = "5";
                     } elseif ($gapps[$a] == "1") {
                         $bobotps[$a] = "4.5";
@@ -306,7 +313,7 @@
                         $bobotps[$a] = "1";
                     }
 
-                    if ($gapbing[$a] == "0"){
+                    if ($gapbing[$a] == "0") {
                         $bobotbing[$a] = "5";
                     } elseif ($gapbing[$a] == "1") {
                         $bobotbing[$a] = "4.5";
@@ -326,7 +333,7 @@
                         $bobotbing[$a] = "1";
                     }
 
-                    if ($gapdk[$a] == "0"){
+                    if ($gapdk[$a] == "0") {
                         $bobotdk[$a] = "5";
                     } elseif ($gapdk[$a] == "1") {
                         $bobotdk[$a] = "4.5";
@@ -346,7 +353,7 @@
                         $bobotdk[$a] = "1";
                     }
 
-                    if ($gappres[$a] == "0"){
+                    if ($gappres[$a] == "0") {
                         $bobotpres[$a] = "5";
                     } elseif ($gappres[$a] == "1") {
                         $bobotpres[$a] = "4.5";
@@ -366,7 +373,7 @@
                         $bobotpres[$a] = "1";
                     }
 
-                    if ($gaptk[$a] == "0"){
+                    if ($gaptk[$a] == "0") {
                         $bobottk[$a] = "5";
                     } elseif ($gaptk[$a] == "1") {
                         $bobottk[$a] = "4.5";
@@ -386,7 +393,7 @@
                         $bobottk[$a] = "1";
                     }
 
-                    if ($gapukm[$a] == "0"){
+                    if ($gapukm[$a] == "0") {
                         $bobotukm[$a] = "5";
                     } elseif ($gapukm[$a] == "1") {
                         $bobotukm[$a] = "4.5";
@@ -406,7 +413,7 @@
                         $bobotukm[$a] = "1";
                     }
 
-                    if ($gapdisiplin[$a] == "0"){
+                    if ($gapdisiplin[$a] == "0") {
                         $bobotdisiplin[$a] = "5";
                     } elseif ($gapdisiplin[$a] == "1") {
                         $bobotdisiplin[$a] = "4.5";
@@ -426,7 +433,7 @@
                         $bobotdisiplin[$a] = "1";
                     }
 
-                    if ($gapki[$a] == "0"){
+                    if ($gapki[$a] == "0") {
                         $bobotki[$a] = "5";
                     } elseif ($gapki[$a] == "1") {
                         $bobotki[$a] = "4.5";
@@ -446,7 +453,7 @@
                         $bobotki[$a] = "1";
                     }
 
-                    if ($gapsmt[$a] == "0"){
+                    if ($gapsmt[$a] == "0") {
                         $bobotsmt[$a] = "5";
                     } elseif ($gapsmt[$a] == "1") {
                         $bobotsmt[$a] = "4.5";
@@ -467,167 +474,220 @@
                     }
 
                     //CoreFaktor
-                    $nac[$a]=(($bobotipk[$a]) + ($bobotki[$a]))/2;
-                    $nkkc[$a]=(($bobotps[$a]) + ($bobotbing[$a]))/2;
-                    $npc[$a]=(($bobotpres[$a]))/1;
-                    $nppc[$a]=(($bobotdk[$a]))/1;
-                    
+                    $nac[$a] = (($bobotipk[$a]) + ($bobotki[$a])) / 2;
+                    $nkkc[$a] = (($bobotps[$a]) + ($bobotbing[$a])) / 2;
+                    $npc[$a] = (($bobotpres[$a])) / 1;
+                    $nppc[$a] = (($bobotdk[$a])) / 1;
+
 
                     //SecondaryFaktor
-                    $nas[$a]=(($bobotsmt[$a]))/1;
-                    $nkks[$a]=0/2;
-                    $nps[$a]=(($bobotukm[$a]))/1;
-                    $npps[$a]=(($bobottk[$a]) + ($bobotdisiplin[$a]))/2;
+                    $nas[$a] = (($bobotsmt[$a])) / 1;
+                    $nkks[$a] = 0 / 2;
+                    $nps[$a] = (($bobotukm[$a])) / 1;
+                    $npps[$a] = (($bobottk[$a]) + ($bobotdisiplin[$a])) / 2;
 
                     //Nilai Akhir Tiap Akspek
-                    $nilaiakhirNA[$a]=(0.6*$nac[$a]) + (0.4*$nas[$a]);
-                    $nilaiakhirNKK[$a]=(0.6*$nkkc[$a]) + (0.4*$nkks[$a]);
-                    $nilaiakhirNP[$a]=(0.6*$npc[$a]) + (0.4*$nps[$a]);
-                    $nilaiakhirNPP[$a]=(0.6*$nppc[$a]) + (0.4*$npps[$a]);
+                    $nilaiakhirNA[$a] = (0.6 * $nac[$a]) + (0.4 * $nas[$a]);
+                    $nilaiakhirNKK[$a] = (0.6 * $nkkc[$a]) + (0.4 * $nkks[$a]);
+                    $nilaiakhirNP[$a] = (0.6 * $npc[$a]) + (0.4 * $nps[$a]);
+                    $nilaiakhirNPP[$a] = (0.6 * $nppc[$a]) + (0.4 * $npps[$a]);
 
                     //$ncfsiswa[$a] = (($bobotipk[$a]) + ($bobotps[$a]) + ($bobotpres[$a]) + ($bobotki[$a]) + ($bobotbing[$a]) + ($bobotdk[$a]))/6;
                     //$nsfsiswa[$a] = (($bobotsmt[$a]) + ($bobottk[$a]) + ($bobotukm[$a]) + ($bobotdisiplin[$a]))/4;
                     $hasilsiswa[$a] = (0.35 * $nilaiakhirNA[$a]) + (0.25 * $nilaiakhirNKK[$a]) + (0.20 * $nilaiakhirNP[$a]) + (0.2 * $nilaiakhirNPP[$a]);
 
-                    $sql = mysqli_query($koneksi,"INSERT INTO hasilmhs (`nama`, `bobotipk`, `bobotps`, `bobotbing`, `bobotdk`, `bobotpres`, `bobottk`, `bobotukm`, `bobotdisiplin`, `bobotki`, `bobotsmt`, `na`, `nkk`, `np`, `npp`, `hasil`) 
-                    VALUES('$nama[$a]','$bobotipk[$a]','$bobotps[$a]','$bobotbing[$a]', '$bobotdk[$a]', '$bobotpres[$a]', '$bobottk[$a]', '$bobotukm[$a]', '$bobotdisiplin[$a]', '$bobotki[$a]', '$bobotsmt[$a]','$nilaiakhirNA[$a]','$nilaiakhirNKK[$a]','$nilaiakhirNP[$a]','$nilaiakhirNPP[$a]','$hasilsiswa[$a]')") or die (mysqli_error($koneksi));
+                    $sql = mysqli_query($koneksi, "INSERT INTO hasilmhs (`nama`, `bobotipk`, `bobotps`, `bobotbing`, `bobotdk`, `bobotpres`, `bobottk`, `bobotukm`, `bobotdisiplin`, `bobotki`, `bobotsmt`, `na`, `nkk`, `np`, `npp`, `hasil`) 
+                    VALUES('$nama[$a]','$bobotipk[$a]','$bobotps[$a]','$bobotbing[$a]', '$bobotdk[$a]', '$bobotpres[$a]', '$bobottk[$a]', '$bobotukm[$a]', '$bobotdisiplin[$a]', '$bobotki[$a]', '$bobotsmt[$a]','$nilaiakhirNA[$a]','$nilaiakhirNKK[$a]','$nilaiakhirNP[$a]','$nilaiakhirNPP[$a]','$hasilsiswa[$a]')") or die(mysqli_error($koneksi));
 
                 }
 
-    ?>
+                ?>
 
-    <!-- TUTUP -->
-    <?php
+                <!-- TUTUP -->
+                <?php
             }
         }
-    ?>
-    <!-- /TUTUP -->
-    <br><br>
-    <!-- Table -->
-    <table class="table table-responsive">
-        <thead class="thead-dark">
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Nama</th>
-              <th scope="col">IPK</th>
-              <th scope="col">Public Speaking</th>
-              <th scope="col">Bahasa Inggris</th>
-              <th scope="col">Daftar Kehadiran</th>
-              <th scope="col">Prestasi</th>
-              <th scope="col">Tingkah Laku</th>
-              <th scope="col">UKM</th>
-              <th scope="col">Kedisiplinan</th>
-              <th scope="col">Karya Ilmiah</th>
-              <th scope="col">Semester</th>
-              <th scope="col">Aksi</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php 
-                $query1 = mysqli_query($koneksi,"SELECT * FROM keteranganmhs");
-                if(mysqli_num_rows($query1)>0){ 
-            ?>
-            <?php
-                $a = 1;
-                while($data = mysqli_fetch_array($query1)){
-            ?>
-            <tr>
-                <th scope="row"><?php echo $a; ?></th>
-                <td><?php echo $data["nama"];?></td>
-                <td><?php echo $data["ket_ipk"];?></td>
-                <td><?php echo $data["ket_ps"];?></td>
-                <td><?php echo $data["ket_bing"];?></td>
-                <td><?php echo $data["ket_dk"];?></td>
-                <td><?php echo $data["ket_pres"];?></td>
-                <td><?php echo $data["ket_tk"];?></td>
-                <td><?php echo $data["ket_ukm"];?></td>
-                <td><?php echo $data["ket_disiplin"];?></td>
-                <td><?php echo $data["ket_ki"];?></td>
-                <td><?php echo $data["ket_smt"];?></td>
-                <td>
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                       <!-- <button type="button" class="btn btn-danger" onclick="window.location.href='delete.php?id=<?php echo $data['nama']; ?>'">Hapus</button>-->
-                       <button class="btn btn-danger" onclick="window.location.href='delete.php?id=<?php echo $data['nama']; ?>'"><i class="fa fa-trash"></i></button>
-                    </div>
-                </td>
-            </tr>
-            <?php $a++; } ?>
-            <?php } ?>
-            </tbody>
-    </table>
-    <!-- /Tabel -->
-
-
-    <br><br>
-
-
-    <!-- Table -->
-    <form  role="form" method="post" action="hasil.php" class="form-inline">
+        ?>
+        <!-- /TUTUP -->
+        <br><br>
+        <!-- Table -->
         <table class="table table-responsive">
             <thead class="thead-dark">
                 <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Nama</th>
-                  <th scope="col">IPK</th>
-                  <th scope="col">Public Speaking</th>
-                  <th scope="col">Bahasa Inggris</th>
-                  <th scope="col">Daftar Kehadiran</th>
-                  <th scope="col">Prestasi</th>
-                  <th scope="col">Tingkah Laku</th>
-                  <th scope="col">UKM</th>
-                  <th scope="col">Kedisiplinan</th>
-                  <th scope="col">Karya Ilmiah</th>
-                  <th scope="col">Semester</th>
+                    <th scope="col">#</th>
+                    <th scope="col">Nama</th>
+                    <th scope="col">IPK</th>
+                    <th scope="col">Public Speaking</th>
+                    <th scope="col">Bahasa Inggris</th>
+                    <th scope="col">Daftar Kehadiran</th>
+                    <th scope="col">Prestasi</th>
+                    <th scope="col">Tingkah Laku</th>
+                    <th scope="col">UKM</th>
+                    <th scope="col">Kedisiplinan</th>
+                    <th scope="col">Karya Ilmiah</th>
+                    <th scope="col">Semester</th>
+                    <th scope="col">Aksi</th>
                 </tr>
             </thead>
             <tbody>
-                <?php 
-                    $query = mysqli_query($koneksi,"SELECT * FROM mahasiswa");
-                    if(mysqli_num_rows($query)>0){ 
-                ?>
                 <?php
+                $query1 = mysqli_query($koneksi, "SELECT * FROM keteranganmhs");
+                if (mysqli_num_rows($query1) > 0) {
+                    ?>
+                    <?php
                     $a = 1;
-                    while($data = mysqli_fetch_array($query)){
-                ?>
-                <tr>
-                  <th scope="row"><?php echo $a; ?></th>
-                  <td><?php echo $data["nama"];?></td>
-                  <td><?php echo $data["ipk"];?></td>
-                  <td><?php echo $data["public speaking"];?></td>
-                  <td><?php echo $data["bahasa inggris"];?></td>
-                  <td><?php echo $data["daftar kehadiran"];?></td>
-                  <td><?php echo $data["prestasi"];?></td>
-                  <td><?php echo $data["tingkah laku"];?></td>
-                  <td><?php echo $data["ukm"];?></td>
-                  <td><?php echo $data["disiplin"];?></td>
-                  <td><?php echo $data["karya ilmiah"];?></td>
-                  <td><?php echo $data["semester"];?></td>
-                </tr>
-                <?php $a++; } ?>
+                    while ($data = mysqli_fetch_array($query1)) {
+                        ?>
+                        <tr>
+                            <th scope="row">
+                                <?php echo $a; ?>
+                            </th>
+                            <td>
+                                <?php echo $data["nama"]; ?>
+                            </td>
+                            <td>
+                                <?php echo $data["ket_ipk"]; ?>
+                            </td>
+                            <td>
+                                <?php echo $data["ket_ps"]; ?>
+                            </td>
+                            <td>
+                                <?php echo $data["ket_bing"]; ?>
+                            </td>
+                            <td>
+                                <?php echo $data["ket_dk"]; ?>
+                            </td>
+                            <td>
+                                <?php echo $data["ket_pres"]; ?>
+                            </td>
+                            <td>
+                                <?php echo $data["ket_tk"]; ?>
+                            </td>
+                            <td>
+                                <?php echo $data["ket_ukm"]; ?>
+                            </td>
+                            <td>
+                                <?php echo $data["ket_disiplin"]; ?>
+                            </td>
+                            <td>
+                                <?php echo $data["ket_ki"]; ?>
+                            </td>
+                            <td>
+                                <?php echo $data["ket_smt"]; ?>
+                            </td>
+                            <td>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <!-- <button type="button" class="btn btn-danger" onclick="window.location.href='delete.php?id=<?php echo $data['nama']; ?>'">Hapus</button>-->
+                                    <button class="btn btn-danger"
+                                        onclick="window.location.href='delete.php?id=<?php echo $data['nama']; ?>'"><i
+                                            class="fa fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <?php $a++;
+                    } ?>
                 <?php } ?>
             </tbody>
-            <thead class="thead-dark">
-                <tr>
-                  <th scope="col">GAP</th>
-                  <th scope="col"></th>
-                  <th scope="col">4</th>
-                  <th scope="col">3</th>
-                  <th scope="col">3</th>
-                  <th scope="col">3</th>
-                  <th scope="col">4</th>
-                  <th scope="col">4</th>
-                  <th scope="col">5</th>
-                  <th scope="col">4</th>
-                  <th scope="col">4</th>
-                  <th scope="col">4</th>
-                </tr>
-            </thead>
         </table>
-        <button type="submit" name="hitunggap" class="btn btn-primary mb-2">Hitung</button>
-    </form>
-    <!-- /Tabel -->
+        <!-- /Tabel -->
+
+
+        <br><br>
+
+
+        <!-- Table -->
+        <form role="form" method="post" action="hasil.php" class="form-inline">
+            <table class="table table-responsive">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">IPK</th>
+                        <th scope="col">Public Speaking</th>
+                        <th scope="col">Bahasa Inggris</th>
+                        <th scope="col">Daftar Kehadiran</th>
+                        <th scope="col">Prestasi</th>
+                        <th scope="col">Tingkah Laku</th>
+                        <th scope="col">UKM</th>
+                        <th scope="col">Kedisiplinan</th>
+                        <th scope="col">Karya Ilmiah</th>
+                        <th scope="col">Semester</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $query = mysqli_query($koneksi, "SELECT * FROM mahasiswa");
+                    if (mysqli_num_rows($query) > 0) {
+                        ?>
+                        <?php
+                        $a = 1;
+                        while ($data = mysqli_fetch_array($query)) {
+                            ?>
+                            <tr>
+                                <th scope="row">
+                                    <?php echo $a; ?>
+                                </th>
+                                <td>
+                                    <?php echo $data["nama"]; ?>
+                                </td>
+                                <td>
+                                    <?php echo $data["ipk"]; ?>
+                                </td>
+                                <td>
+                                    <?php echo $data["public speaking"]; ?>
+                                </td>
+                                <td>
+                                    <?php echo $data["bahasa inggris"]; ?>
+                                </td>
+                                <td>
+                                    <?php echo $data["daftar kehadiran"]; ?>
+                                </td>
+                                <td>
+                                    <?php echo $data["prestasi"]; ?>
+                                </td>
+                                <td>
+                                    <?php echo $data["tingkah laku"]; ?>
+                                </td>
+                                <td>
+                                    <?php echo $data["ukm"]; ?>
+                                </td>
+                                <td>
+                                    <?php echo $data["disiplin"]; ?>
+                                </td>
+                                <td>
+                                    <?php echo $data["karya ilmiah"]; ?>
+                                </td>
+                                <td>
+                                    <?php echo $data["semester"]; ?>
+                                </td>
+                            </tr>
+                            <?php $a++;
+                        } ?>
+                    <?php } ?>
+                </tbody>
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">GAP</th>
+                        <th scope="col"></th>
+                        <th scope="col">4</th>
+                        <th scope="col">3</th>
+                        <th scope="col">3</th>
+                        <th scope="col">3</th>
+                        <th scope="col">4</th>
+                        <th scope="col">4</th>
+                        <th scope="col">5</th>
+                        <th scope="col">4</th>
+                        <th scope="col">4</th>
+                        <th scope="col">4</th>
+                    </tr>
+                </thead>
+            </table>
+            <button type="submit" name="hitunggap" class="btn btn-primary mb-2">Hitung</button>
+        </form>
+        <!-- /Tabel -->
 
     </div>
 
 </body>
+
 </html>
