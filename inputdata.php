@@ -44,7 +44,6 @@ include "koneksi.php";
 
 	<div class="container"><br><br>
 
-
 		<!-- Form awal -->
 		<form role="form" method="post" class="form-inline" class="animated infinite zoomIn delay-2s">
 			<div class="form-group mb-2">
@@ -93,8 +92,8 @@ include "koneksi.php";
 								<option>----Select an option----</option>
 								<option value="1">
 									<=2,5 </option>
-								<option value="2">>2,5 - <=3< /option>
-								<option value="3">>3 - <=3,5< /option>
+								<option value="2">>2,5 - <=3 </option>
+								<option value="3">>3 - <=3,5 </option>
 								<option value="4">>3,5</option>
 							</select>
 						</div>
@@ -139,7 +138,7 @@ include "koneksi.php";
 							</select>
 						</div>
 						<div class="form-group">
-							<label class="font-weight-bold" for="exampleFormControlSelect2">Prestasi Akademin &
+							<label class="font-weight-bold" for="exampleFormControlSelect2">Prestasi Akademik &
 								Nonakademik</label>
 							<select name="prestasi<?php echo $a; ?>" class="form-control" id="exampleFormControlSelect2">
 								<option>----Select an option----</option>
@@ -195,9 +194,11 @@ include "koneksi.php";
 					<button type="submit" name="submitform" class="btn btn-primary"
 						style="display: block; margin:0 auto">Submit</button><br>
 			</form>
-		<?php } ?>
+			<?php
+		}
+		?>
 		<!-- /Form -->
-	</div>
+
 	</div>
 
 </body>
