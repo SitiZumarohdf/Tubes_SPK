@@ -80,8 +80,8 @@ CREATE TABLE `hasilmhs` (
 --
 
 INSERT INTO `hasilmhs` (`nama`, `bobotipk`, `bobotps`, `bobotbing`, `bobotdk`, `bobotpres`, `bobottk`, `bobotukm`, `bobotdisiplin`, `bobotki`, `bobotsmt`, `na`, `nkk`, `np`, `npp`, `hasil`) VALUES
-('Mhs 1', 5, 5, 4, 4, 4, 5, 3, 3, 5, 4.5, 5, 4.25, 4.7),
-('Mhs 2', 4, 5, 5, 5, 4, 3, 5, 4, 5, 3, 4.5, 5, 4.7);
+('Mhs 1', 5, 5, 4.5, 4.5, 4, 5, 3, 4, 5, 3, 4.2, 2.85, 3.6, 4.5, 3.80),
+('Mhs 2', 4, 4, 5, 4, 4, 5, 2, 4, 5, 3, 3.90, 2.7, 3.2, 4.2, 3.52);
 
 -- --------------------------------------------------------
 
@@ -132,7 +132,7 @@ CREATE TABLE `mahasiswa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `siswa`
+-- Dumping data for table `mahasiswa`
 --
 
 INSERT INTO `mahasiswa` (`nama`, `ipk`, `public speaking`, `bahasa inggris`,`daftar kehadiran`,`prestasi`,`tingkah laku`,`ukm`,`disiplin`, `karya ilmiah`,`semester`) VALUES
