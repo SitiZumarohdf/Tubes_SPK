@@ -68,8 +68,10 @@ CREATE TABLE `hasilmhs` (
   `bobotdisiplin` float NOT NULL,
   `bobotki` float NOT NULL,
   `bobotsmt` float NOT NULL,
-  `ncf` float NOT NULL,
-  `nsf` float NOT NULL,
+  `na` float NOT NULL,
+  `nkk` float NOT NULL,
+  `np` float NOT NULL,
+  `npp` float NOT NULL,
   `hasil` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -77,7 +79,7 @@ CREATE TABLE `hasilmhs` (
 -- Dumping data for table `hasilmhs`
 --
 
-INSERT INTO `hasilmhs` (`nama`, `bobotipk`, `bobotps`,  `bobotbing`, `bobotdk`,`bobotpres`,`bobottk`,  `bobotukm`,`bobotdisiplin`,`bobotki`,`bobotsmt`, `ncf`, `nsf`, `hasil`) VALUES
+INSERT INTO `hasilmhs` (`nama`, `bobotipk`, `bobotps`, `bobotbing`, `bobotdk`, `bobotpres`, `bobottk`, `bobotukm`, `bobotdisiplin`, `bobotki`, `bobotsmt`, `na`, `nkk`, `np`, `npp`, `hasil`) VALUES
 ('Mhs 1', 5, 5, 4, 4, 4, 5, 3, 3, 5, 4.5, 5, 4.25, 4.7),
 ('Mhs 2', 4, 5, 5, 5, 4, 3, 5, 4, 5, 3, 4.5, 5, 4.7);
 
