@@ -25,9 +25,6 @@ include "koneksi.php";
                     <a class="nav-link text-white" href="inputdata.php">Input Data</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="inputdata.php">Update Data</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link text-white" href="proses.php">Record</a>
                 </li>
                 <li class="nav-item">
@@ -486,7 +483,7 @@ include "koneksi.php";
                     $nps[$a] = (($bobotukm[$a])) / 1;
                     $npps[$a] = (($bobottk[$a]) + ($bobotdisiplin[$a])) / 2;
 
-                    //Nilai Akhir Tiap Akspek
+                    //Nilai CF dan SF dari masing-masing Aspek
                     $nilaiakhirNA[$a] = (0.6 * $nac[$a]) + (0.4 * $nas[$a]);
                     $nilaiakhirNKK[$a] = (0.6 * $nkkc[$a]) + (0.4 * $nkks[$a]);
                     $nilaiakhirNP[$a] = (0.6 * $npc[$a]) + (0.4 * $nps[$a]);
@@ -494,6 +491,7 @@ include "koneksi.php";
 
                     //$ncfsiswa[$a] = (($bobotipk[$a]) + ($bobotps[$a]) + ($bobotpres[$a]) + ($bobotki[$a]) + ($bobotbing[$a]) + ($bobotdk[$a]))/6;
                     //$nsfsiswa[$a] = (($bobotsmt[$a]) + ($bobottk[$a]) + ($bobotukm[$a]) + ($bobotdisiplin[$a]))/4;
+                    //Hasil Akhir dari semua aspek dikalikan dengan masing-masing bobot
                     $hasilsiswa[$a] = (0.35 * $nilaiakhirNA[$a]) + (0.25 * $nilaiakhirNKK[$a]) + (0.20 * $nilaiakhirNP[$a]) + (0.2 * $nilaiakhirNPP[$a]);
 
                     $sql = mysqli_query($koneksi, "INSERT INTO hasilmhs (`nama`, `bobotipk`, `bobotps`, `bobotbing`, `bobotdk`, `bobotpres`, `bobottk`, `bobotukm`, `bobotdisiplin`, `bobotki`, `bobotsmt`, `na`, `nkk`, `np`, `npp`, `hasil`) 
@@ -581,9 +579,6 @@ include "koneksi.php";
                                     <button class="btn btn-danger" style="margin-right: 5px;"
                                         onclick="window.location.href='delete.php?id=<?php echo $data['nama']; ?>'"><i
                                             class="fa fa-trash"></i></button>
-                                            <button class="btn btn-warning" style="margin-left: 5px;"
-                                        onclick="window.location.href='update.php?id=<?php echo $data['nama']; ?>'"><i
-                                            class="fa fa-pencil-square-o"></i></button>
                                 </div>
                             </td>
                         </tr>

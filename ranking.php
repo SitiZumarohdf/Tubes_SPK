@@ -24,9 +24,6 @@ include "koneksi.php";
                     <a class="nav-link text-white" href="inputdata.php">Input Data</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="inputdata.php">Update Data</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link text-white" href="proses.php">Record</a>
                 </li>
                 <li class="nav-item">
